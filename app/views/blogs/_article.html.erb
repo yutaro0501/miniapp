@@ -1,0 +1,20 @@
+<ul class="list_article">
+  <li>
+    <div class="ribbon3">
+      <h3><%= article.title %></h3>
+    </div>
+    <% if article.image != "" %>
+      <p><img src = <%= article.image %>></p>
+    <% end %>
+    <div class="balloon2-top">
+      <p><%= article.content %></p>
+    </div>    
+    <p><%= article.created_at.strftime('%Y/%m/%d') %></p>
+  </li>
+  <% if user_signed_in? && article.user_id == current_user.id %>
+  <ul class="edit_list">
+    <li class="button"><%= link_to "編集", "/#{article.id}/edit", method: :get %></li>
+    <li class="button"><%= link_to "削除", "/#{article.id}", method: :delete %></li>
+  </ul>
+  <%end%>
+</ul>

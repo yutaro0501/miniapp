@@ -1,0 +1,9 @@
+<div class="contents row">
+  <a href="/">一覧に戻る</a>
+  <%= form_for @article, :url =>{:blogs => :edit} do |f|%>
+    <%= f.text_field :title, :value => params[:title], placeholder: "title" %>
+    <%= f.text_field :image, :value => params[:image], placeholder: "Image Url" %>
+    <%= f.text_area :content, :value => params[:content],placeholder: "text" , rows: "10" %>
+    <%= f.submit "SEND" %>
+  <% end %>
+</div>

@@ -1,0 +1,147 @@
+li {
+  list-style: none;
+}
+
+header {
+  font-family: 'kanjyuku';
+  display: flex;
+  width: 100%;
+  background-color: #a5d6a7;
+  height: 70px;
+  position: fixed;
+  font-family: 'M PLUS 1p', sans-serif;
+  border-radius: 10px;
+  z-index: 9;
+  opacity: 0.92;
+}
+
+h1 {
+  color: #e8f5e9;
+  margin: auto 30px;
+}
+
+p.name {
+  text-align: center;
+  margin: auto 30px;
+  color: royalblue;
+}
+
+img {
+  border-radius: 30px;
+}
+
+ul.nav {
+  display: flex;
+  margin: auto;
+}
+
+li.nav {
+  margin: 0 50px;
+}
+
+.contents {
+  padding-top: 70px;
+  background-color: honeydew;
+  font-family: 'M PLUS 1p', sans-serif;
+}
+
+ul.edit_list {
+  display: flex;
+}
+li.button {
+  margin: 0 20px;
+}
+
+ul.list_article {
+  border-bottom: 1px solid gainsboro;
+  padding-bottom: 50px;
+}
+
+.balloon2-top {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: #555;
+  font-size: 16px;
+  background: #FFF;
+  border: solid 3px #555;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.balloon2-top:before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  margin-left: -15px;
+  border: 12px solid transparent;
+  border-bottom: 12px solid #FFF;
+  z-index: 2;
+}
+
+.balloon2-top:after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  margin-left: -17px;
+  border: 14px solid transparent;
+  border-bottom: 14px solid #555;
+  z-index: 1;
+}
+
+.balloon2-top p {
+  margin: 0;
+  padding: 0;
+}
+
+.ribbon3 {
+  display: inline-block;
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  padding: 7px 0;
+  font-size: 18px;
+  background: #acd879;
+  color: #FFF;
+  box-sizing: border-box;
+}
+
+.ribbon3 h3 {
+  margin: 0;
+  padding: 0 30px;
+  border-top: dashed 2px rgba(255, 255, 255, 0.5);
+  border-bottom: dashed 2px rgba(255, 255, 255, 0.5);
+  line-height: 42px;
+}
+
+.ribbon3:before, .ribbon3:after {
+  position: absolute;
+  content: '';
+  width: 0px;
+  height: 0px;
+  z-index: 1;
+}
+
+.ribbon3:before {
+  /*左の山形*/
+  top: 0;
+  left: 0;
+  border-width: 30px 0px 30px 15px;
+  border-color: transparent transparent transparent honeydew;;
+  border-style: solid;
+}
+
+.ribbon3:after {
+  /*右の山形*/
+  top: 0;
+  right: 0;
+  border-width: 30px 15px 30px 0px;
+  border-color: transparent honeydew; transparent transparent;
+  border-style: solid;
+}

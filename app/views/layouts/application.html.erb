@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myblog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+   <% if user_signed_in? %>
+   <header>
+  <h1>MY BLOG</h1>
+  <p class="name"><%= current_user.nickname %>さん</p>
+  <ul class="nav">
+    <li class="nav"><a href="/new">新規投稿</a></li>
+    <li class="nav"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+  </ul>
+  </header>
+  <% else %>
+  <header>
+  <h1>MY BLOG</h1>
+  <ul class="nav">
+    <li class="nav"><%= link_to "ログイン", new_user_session_path, class: 'post' %></li>
+    <li class="nav"><%= link_to "新規登録", new_user_registration_path, class: 'post' %></li>
+  </ul>
+  </header>
+  <% end %>
+  <div class ="contents">
+    <%= yield %>
+  </div>
+  </body>
+</html>
